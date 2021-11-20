@@ -5,6 +5,7 @@ def compare_numbers(number, user_guess):
     for i in range(len(number)):
         
         
+        
         if number[i]== user_guess[i]:
             
             cowbull[1]+=1
