@@ -9,6 +9,7 @@ def draw_line(width, edge, filling):
 
 def display_winner(player):
     if player == 0:
+                
         print("Tie")
     else:
         print("Player " + str(player) + " wins!")
@@ -19,6 +20,7 @@ def check_row_winner(row):
     If there is no winner, return 0.
     """
     if row[0] == row[1] and row[1] == row[2]:
+        
         return row[0]
     return 0
 
@@ -41,8 +43,10 @@ def check_winner(game):
     game_slices.append(up_diagonal)
 
     for game_slice in game_slices:
+        
         winner = check_row_winner(game_slice)
         if winner != 0:
+            
             return winner
 
     return winner
@@ -91,6 +95,7 @@ def moves_exist(game):
 
 if __name__ == '__main__':
     
+    
     game = start_game()
     display_game(game)
     player = 1
@@ -101,7 +106,7 @@ if __name__ == '__main__':
         available = False
         while not available:
             row = convert_input_to_coordinate(int(input("Which row? (start with 1) ")))
-            column = convert_input_to_coordinate(int(input("Which column? (start with 1) ")))
+            column = convert_input_to_coordinate(int(input("Which column? (start with 1")))
             available = check_space_empty(game, row,column)
         game = add_piece(game, player, row, column)
         display_game(game)
