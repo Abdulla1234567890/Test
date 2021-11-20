@@ -67,7 +67,7 @@ def add_piece(game, player, row, column):
     row: 0-index row
     column: 0-index column
     '''
-    game[row][column+1] = player
+    game[row][column] = player
     return game
 
 def check_space_empty(game, row, column):
@@ -90,6 +90,7 @@ def moves_exist(game):
     return False
 
 if __name__ == '__main__':
+    
     game = start_game()
     display_game(game)
     player = 1
